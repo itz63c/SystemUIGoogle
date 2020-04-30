@@ -1,0 +1,44 @@
+package androidx.leanback;
+
+public final class R$layout {
+    public static final int lb_browse_fragment = 2131558578;
+    public static final int lb_browse_title = 2131558579;
+    public static final int lb_details_fragment = 2131558584;
+    public static final int lb_divider = 2131558586;
+    public static final int lb_error_fragment = 2131558587;
+    public static final int lb_fullwidth_details_overview = 2131558588;
+    public static final int lb_guidance = 2131558590;
+    public static final int lb_guidedactions = 2131558591;
+    public static final int lb_guidedactions_datepicker_item = 2131558592;
+    public static final int lb_guidedactions_item = 2131558593;
+    public static final int lb_guidedbuttonactions = 2131558594;
+    public static final int lb_guidedstep_background = 2131558595;
+    public static final int lb_guidedstep_fragment = 2131558596;
+    public static final int lb_header = 2131558597;
+    public static final int lb_headers_fragment = 2131558598;
+    public static final int lb_image_card_view = 2131558599;
+    public static final int lb_image_card_view_themed_badge_left = 2131558600;
+    public static final int lb_image_card_view_themed_badge_right = 2131558601;
+    public static final int lb_image_card_view_themed_content = 2131558602;
+    public static final int lb_image_card_view_themed_title = 2131558603;
+    public static final int lb_list_row = 2131558604;
+    public static final int lb_list_row_hovercard = 2131558605;
+    public static final int lb_onboarding_fragment = 2131558608;
+    public static final int lb_picker = 2131558609;
+    public static final int lb_picker_column = 2131558610;
+    public static final int lb_picker_item = 2131558611;
+    public static final int lb_picker_separator = 2131558612;
+    public static final int lb_playback_fragment = 2131558616;
+    public static final int lb_playback_now_playing_bars = 2131558617;
+    public static final int lb_row_container = 2131558620;
+    public static final int lb_row_header = 2131558621;
+    public static final int lb_rows_fragment = 2131558624;
+    public static final int lb_search_bar = 2131558625;
+    public static final int lb_search_fragment = 2131558626;
+    public static final int lb_search_orb = 2131558627;
+    public static final int lb_section_header = 2131558628;
+    public static final int lb_speech_orb = 2131558630;
+    public static final int lb_title_view = 2131558631;
+    public static final int lb_vertical_grid_fragment = 2131558633;
+    public static final int lb_video_surface = 2131558634;
+}

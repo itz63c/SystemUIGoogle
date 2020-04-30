@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:androidprv="http://schemas.android.com/apk/prv/res/android" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:sysui="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView android:id="@+id/global_screenshot_legacy_background" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@android:color/black"/>
+    <ImageView android:layout_gravity="center" android:id="@+id/global_screenshot_legacy" android:background="@drawable/screenshot_panel" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:adjustViewBounds="true"/>
+    <ImageView android:id="@+id/global_screenshot_legacy_flash" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:src="@android:color/white"/>
+    <com.android.systemui.screenshot.ScreenshotSelectorView android:id="@+id/global_screenshot_legacy_selector" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent" android:pointerIcon="1007"/>
+</FrameLayout>

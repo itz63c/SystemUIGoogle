@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:androidprv="http://schemas.android.com/apk/prv/res/android" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:sysui="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:gravity="center_horizontal" android:orientation="vertical" android:paddingTop="@dimen/controls_management_top_padding" android:layout_width="match_parent" android:layout_height="match_parent" android:paddingStart="@dimen/controls_management_side_padding" android:paddingEnd="@dimen/controls_management_side_padding">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <FrameLayout android:gravity="left|center_vertical|center_horizontal|center|start" android:id="@+id/icon_frame" android:paddingTop="@dimen/controls_app_icon_frame_top_padding" android:paddingBottom="@dimen/controls_app_icon_frame_bottom_padding" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="56dp" android:paddingStart="@dimen/controls_app_icon_frame_side_padding" android:paddingEnd="@dimen/controls_app_icon_frame_side_padding">
+            <ImageView android:id="@android:id/icon" android:layout_width="@dimen/controls_app_icon_size" android:layout_height="@dimen/controls_app_icon_size"/>
+        </FrameLayout>
+        <TextView android:textAppearance="?android:attr/textAppearanceLarge" android:textSize="@dimen/controls_title_size" android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAlignment="center"/>
+    </LinearLayout>
+    <TextView android:textAppearance="?android:attr/textAppearanceSmall" android:id="@+id/subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="@dimen/controls_management_titles_margin" android:textAlignment="center"/>
+    <ViewStub android:id="@+id/stub" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+    <FrameLayout android:layout_width="match_parent" android:layout_height="64dp">
+        <View android:layout_gravity="top|center_vertical|center_horizontal|center" android:background="?android:attr/listDivider" android:layout_width="match_parent" android:layout_height="@dimen/controls_app_divider_height"/>
+        <androidx.constraintlayout.widget.ConstraintLayout android:padding="4dp" android:layout_width="match_parent" android:layout_height="match_parent">
+            <Button android:gravity="center_vertical" android:id="@+id/other_apps" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="See other apps" sysui:layout_constraintBottom_toBottomOf="0" sysui:layout_constraintStart_toStartOf="0" sysui:layout_constraintTop_toTopOf="0" style="@android:style/Animation.VoiceInteractionSession"/>
+            <Button android:id="@+id/done" android:layout_width="wrap_content" android:layout_height="match_parent" android:text="Done" sysui:layout_constraintBottom_toBottomOf="0" sysui:layout_constraintEnd_toEndOf="0" sysui:layout_constraintTop_toTopOf="0" style="@android:style/Animation.VoiceActivity"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</LinearLayout>

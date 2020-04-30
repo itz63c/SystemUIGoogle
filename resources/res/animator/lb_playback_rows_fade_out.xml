@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animator xmlns:androidprv="http://schemas.android.com/apk/prv/res/android" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt" android:duration="@integer/lb_playback_rows_fade_out_ms" android:valueFrom="1" android:valueTo="0" android:valueType="floatType"/>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="BrightnessDialogContainer">
+        <item name="android:layout_width">360dp</item>
+    </style>
+    <style name="DockedDividerBackground">
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_width">10dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    <style name="DockedDividerHandle">
+        <item name="android:layout_gravity">clip_horizontal</item>
+        <item name="android:layout_width">48dp</item>
+        <item name="android:layout_height">96dp</item>
+    </style>
+    <style name="DockedDividerMinimizedShadow">
+        <item name="android:layout_width">8dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+</resources>

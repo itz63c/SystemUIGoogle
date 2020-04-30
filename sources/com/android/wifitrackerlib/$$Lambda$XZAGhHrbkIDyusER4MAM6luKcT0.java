@@ -1,0 +1,17 @@
+package com.android.wifitrackerlib;
+
+import java.net.InetAddress;
+import java.util.function.Function;
+
+/* renamed from: com.android.wifitrackerlib.-$$Lambda$XZAGhHrbkIDyusER4MAM6luKcT0 reason: invalid class name */
+/* compiled from: lambda */
+public final /* synthetic */ class $$Lambda$XZAGhHrbkIDyusER4MAM6luKcT0 implements Function {
+    public static final /* synthetic */ $$Lambda$XZAGhHrbkIDyusER4MAM6luKcT0 INSTANCE = new $$Lambda$XZAGhHrbkIDyusER4MAM6luKcT0();
+
+    private /* synthetic */ $$Lambda$XZAGhHrbkIDyusER4MAM6luKcT0() {
+    }
+
+    public final Object apply(Object obj) {
+        return ((InetAddress) obj).getHostAddress();
+    }
+}

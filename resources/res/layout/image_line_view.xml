@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:androidprv="http://schemas.android.com/apk/prv/res/android" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:sysui="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:id="@+id/image_view" android:background="@drawable/image_background" android:padding="12dp" android:visibility="gone" android:layout_width="0dp" android:layout_height="0dp" android:alpha="0.7"/>

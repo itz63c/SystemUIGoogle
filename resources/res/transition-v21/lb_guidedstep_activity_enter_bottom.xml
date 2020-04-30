@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transition xmlns:androidprv="http://schemas.android.com/apk/prv/res/android" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:sysui="http://schemas.android.com/apk/res-auto" xmlns:systemui="http://schemas.android.com/apk/res/com.android.systemui" xmlns:aapt="http://schemas.android.com/aapt" android:interpolator="@android:interpolator/fast_out_linear_in" android:duration="@integer/lb_guidedstep_activity_background_fade_duration_ms" sysui:lb_slideEdge="50" class="androidx.leanback.transition.FadeAndShortSlide"/>

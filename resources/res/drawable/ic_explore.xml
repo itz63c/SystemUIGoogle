@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:androidprv="http://schemas.android.com/apk/prv/res/android" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:sysui="http://schemas.android.com/apk/res-auto" xmlns:aapt="http://schemas.android.com/aapt" android:visible="true" android:drawable="@drawable/ic_explore_inset" android:insetLeft="@dimen/zerostate_icon_tap_padding" android:insetRight="@dimen/zerostate_icon_tap_padding" android:insetTop="@dimen/zerostate_icon_tap_padding" android:insetBottom="@dimen/zerostate_icon_tap_padding"/>

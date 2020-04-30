@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transitionSet xmlns:androidprv="http://schemas.android.com/apk/prv/res/android" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:sysui="http://schemas.android.com/apk/res-auto" xmlns:systemui="http://schemas.android.com/apk/res/com.android.systemui" xmlns:aapt="http://schemas.android.com/aapt" android:duration="@integer/lb_browse_headers_transition_duration">
+    <changeBounds android:interpolator="@android:interpolator/fast_out_linear_in"/>
+    <changeTransform android:interpolator="@android:interpolator/fast_out_linear_in">
+        <targets>
+            <target android:targetId="@+id/container_list"/>
+        </targets>
+    </changeTransform>
+    <fade android:interpolator="@android:interpolator/fast_out_linear_in" android:startDelay="@integer/lb_browse_headers_transition_delay" android:transitionVisibilityMode="mode_in"/>
+    <fade android:interpolator="@android:interpolator/fast_out_linear_in" android:transitionVisibilityMode="mode_out"/>
+</transitionSet>

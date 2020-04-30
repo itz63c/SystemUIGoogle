@@ -1,0 +1,122 @@
+package com.android.systemui.statusbar.notification;
+
+import android.text.Layout;
+import android.text.Spanned;
+import android.text.TextUtils;
+import android.util.Pools.SimplePool;
+import android.view.View;
+import android.widget.TextView;
+import com.android.systemui.statusbar.notification.TransformState.TransformInfo;
+
+public class TextViewTransformState extends TransformState {
+    private static SimplePool<TextViewTransformState> sInstancePool = new SimplePool<>(40);
+    private TextView mText;
+
+    public void initFrom(View view, TransformInfo transformInfo) {
+        super.initFrom(view, transformInfo);
+        this.mText = (TextView) view;
+    }
+
+    /* access modifiers changed from: protected */
+    public boolean sameAs(TransformState transformState) {
+        boolean z = true;
+        if (super.sameAs(transformState)) {
+            return true;
+        }
+        if (transformState instanceof TextViewTransformState) {
+            TextViewTransformState textViewTransformState = (TextViewTransformState) transformState;
+            if (TextUtils.equals(textViewTransformState.mText.getText(), this.mText.getText())) {
+                if (!(getEllipsisCount() == textViewTransformState.getEllipsisCount() && this.mText.getLineCount() == textViewTransformState.mText.getLineCount() && hasSameSpans(textViewTransformState))) {
+                    z = false;
+                }
+                return z;
+            }
+        }
+        return false;
+    }
+
+    private boolean hasSameSpans(TextViewTransformState textViewTransformState) {
+        Class<Object> cls = Object.class;
+        TextView textView = this.mText;
+        boolean z = textView instanceof Spanned;
+        if (z != (textViewTransformState.mText instanceof Spanned)) {
+            return false;
+        }
+        if (!z) {
+            return true;
+        }
+        Spanned spanned = (Spanned) textView;
+        Object[] spans = spanned.getSpans(0, spanned.length(), cls);
+        Spanned spanned2 = (Spanned) textViewTransformState.mText;
+        Object[] spans2 = spanned2.getSpans(0, spanned2.length(), cls);
+        if (spans.length != spans2.length) {
+            return false;
+        }
+        for (int i = 0; i < spans.length; i++) {
+            Object obj = spans[i];
+            Object obj2 = spans2[i];
+            if (!obj.getClass().equals(obj2.getClass()) || spanned.getSpanStart(obj) != spanned2.getSpanStart(obj2) || spanned.getSpanEnd(obj) != spanned2.getSpanEnd(obj2)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /* access modifiers changed from: protected */
+    public boolean transformScale(TransformState transformState) {
+        boolean z = false;
+        if (!(transformState instanceof TextViewTransformState)) {
+            return false;
+        }
+        TextViewTransformState textViewTransformState = (TextViewTransformState) transformState;
+        if (!TextUtils.equals(this.mText.getText(), textViewTransformState.mText.getText())) {
+            return false;
+        }
+        int lineCount = this.mText.getLineCount();
+        if (lineCount == 1 && lineCount == textViewTransformState.mText.getLineCount() && getEllipsisCount() == textViewTransformState.getEllipsisCount() && getViewHeight() != textViewTransformState.getViewHeight()) {
+            z = true;
+        }
+        return z;
+    }
+
+    /* access modifiers changed from: protected */
+    public int getViewWidth() {
+        Layout layout = this.mText.getLayout();
+        if (layout != null) {
+            return (int) layout.getLineWidth(0);
+        }
+        return super.getViewWidth();
+    }
+
+    /* access modifiers changed from: protected */
+    public int getViewHeight() {
+        return this.mText.getLineHeight();
+    }
+
+    private int getEllipsisCount() {
+        Layout layout = this.mText.getLayout();
+        if (layout == null || layout.getLineCount() <= 0) {
+            return 0;
+        }
+        return layout.getEllipsisCount(0);
+    }
+
+    public static TextViewTransformState obtain() {
+        TextViewTransformState textViewTransformState = (TextViewTransformState) sInstancePool.acquire();
+        if (textViewTransformState != null) {
+            return textViewTransformState;
+        }
+        return new TextViewTransformState();
+    }
+
+    public void recycle() {
+        super.recycle();
+        sInstancePool.release(this);
+    }
+
+    /* access modifiers changed from: protected */
+    public void reset() {
+        super.reset();
+        this.mText = null;
+    }
+}
